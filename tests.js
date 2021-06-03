@@ -56,6 +56,23 @@ describe('isEven', function() {
     })
 });
 
+describe('isVowel', function(){
+    it('should return a boolean', function() {
+    expect(isVowel()).toBe(false)
+    })
+    it('should not accept true', function() {
+    expect(isVowel(true)).toBe(false)
+    })
+    it('should not accept false', function () {
+        expect(isVowel(false)).toBe(false)
+    })
+    it('should not accept an empty value', function() {
+     expect(isVowel()).toBe(false)
+    })
+});
 
-
-
+describe('add', function(){
+    it('should be a defined function', function(){
+        expect(typeof add).toBe('function')
+    })
+})
