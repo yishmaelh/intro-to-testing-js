@@ -28,7 +28,7 @@ describe('sayHello', function() {
     it('should return the string "Hello, Blaze!" when executed', function() {
     expect(sayHello("Blaze")).toBe("Hello, Blaze!");
 });
-    it('should return the string "Hello, Pat!" when executed', function() {
+    it('should return the string "Hello, Jane!" when executed', function() {
         expect(sayHello("Jane")).toBe("Hello, Jane!");
     });
     it('should return the string "Hello, World!" when executed', function(){
@@ -74,5 +74,17 @@ describe('isVowel', function(){
 describe('add', function(){
     it('should be a defined function', function(){
         expect(typeof add).toBe('function')
+    })
+    it('should return NaN when not given an input', function() {
+        expect(add()).toBeNaN()
+    })
+    it('should return 5 when given 2 and 3', function(){
+     expect(add(2,3)).toBe(5)
+    })
+    it('should return -12 when given -3 and -9', function() {
+        expect(add(-3, -9)).toBe(-12)
+    })
+    it('should return NaN when given "banana" and "split"', function() {
+        expect(add("banana", "split")).toBeNaN()
     })
 })
