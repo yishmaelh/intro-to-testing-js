@@ -44,15 +44,30 @@ describe('sayHello', function() {
 describe('isFive', function(){
     it('should be a defined function', function(){
      expect(isFive(5)).toBe(true)
-    });
+    })
     it('should return a boolean regardless of input', function(){
     expect(isFive()).toBe(false)
-    });
+    })
+    it('should return true when 5 is executed', function(){
+        expect(isFive(5)).toBe(true)
+    })
 });
 
 describe('isEven', function() {
     it('should return a boolean regardless of input', function () {
         expect(isEven()).toBe(false)
+    })
+    it('should return true when executed with 2', function(){
+        expect(isEven(2)).toBe(true)
+    })
+    it('should return true when executed with -4', function(){
+        expect(isEven(-4)).toBe(true)
+    })
+    it('should return false when executed with 3', function(){
+        expect(isEven(3)).toBe(false)
+    })
+    it('should return true when executed with "8"', function(){
+        expect(isEven("8")).toBe(true)
     })
 });
 
@@ -87,4 +102,7 @@ describe('add', function(){
     it('should return NaN when given "banana" and "split"', function() {
         expect(add("banana", "split")).toBeNaN()
     })
-})
+    it('should return 11 when given 5 and 6', function() {
+        expect(add(5, 6)).toBe(11)
+    })
+});
