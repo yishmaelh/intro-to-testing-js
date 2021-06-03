@@ -41,6 +41,21 @@ describe('sayHello', function() {
     expect(sayHello(false)).toBe("Hello, World!")
 });
 
+describe('isFive', function(){
+    it('should be a defined function', function(){
+     expect(isFive(5)).toBe(true)
+    });
+    it('should return a boolean regardless of input', function(){
+    expect(isFive()).toBe(false)
+    });
+});
+
+describe('isEven', function() {
+    it('should return a boolean regardless of input', function () {
+        expect(isEven()).toBe(false)
+    })
+});
+
 
 
 

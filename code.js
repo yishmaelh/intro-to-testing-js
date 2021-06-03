@@ -12,5 +12,13 @@ function sayHello(name) {
         return "Hello, " + name + "!";
 }
 
+function isFive(input){
+    return (input == 5);
+}
+
+function isEven(x){
+    return (x % 2 === 0);
+}
+
 
 
